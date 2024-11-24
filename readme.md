@@ -9,8 +9,8 @@ Certain tags and sections, e.g. <body>, <html>, etc, removed from html version a
 
 ## Draft Timetable
 
-    <p>The following is the draft timetable:</p>
-    <table>
+<p>The following is the draft timetable:</p>
+<table>
         <thead>
             <tr>
                 <th>No</th>
@@ -19,7 +19,8 @@ Certain tags and sections, e.g. <body>, <html>, etc, removed from html version a
                 <th>Lab</th>
             </tr>
         </thead>
-        <tbody>
+
+<tbody>
             <tr>
                 <td>1</td>
                 <td>17 Jan 2020</td>
@@ -111,6 +112,6 @@ Certain tags and sections, e.g. <body>, <html>, etc, removed from html version a
                 <td></td>
             </tr>
 
-        </tbody>
-    </table>
+</tbody>
+</table>
 

@@ -1,40 +1,11 @@
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-bottom: 20px;
-        }
-        table, th, td {
-            border: 1px solid black;
-        }
-        th, td {
-            padding: 12px;
-            text-align: left;
-        }
-        th {
-            background-color: #990000;
-            color: white;
-        }
-        p {
-            font-size: 16px;
-            margin-bottom: 10px;
-        }
-    </style>
-    <title>Draft Timetable</title>
-</head>
-<body>
+
 
 <H1> Demo of how CSV table can be translated to html </H1>
+
+<pre>
+Certain tags and sections, e.g. <body>, <html>, etc, removed from html version and used for readme.md.
+</pre>
 
     <p>The following is the draft timetable:</p>
     <table>
@@ -140,5 +111,4 @@
 
         </tbody>
     </table>
-</body>
-</html>
+

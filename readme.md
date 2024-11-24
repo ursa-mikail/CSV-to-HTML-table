@@ -7,6 +7,8 @@
 Certain tags and sections, e.g. <body>, <html>, etc, removed from html version and used for readme.md.
 </pre>
 
+## Draft Timetable
+
     <p>The following is the draft timetable:</p>
     <table>
         <thead>

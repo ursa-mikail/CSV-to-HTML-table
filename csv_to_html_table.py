@@ -13,54 +13,68 @@ def csv_to_html(csv_filename, html_filename):
         header = next(reader)
         
         html_content = """
-        <html>
-        <head>
-        <style>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
         table {
             width: 100%;
             border-collapse: collapse;
+            margin-bottom: 20px;
         }
         table, th, td {
             border: 1px solid black;
         }
         th, td {
-            padding: 8px;
+            padding: 12px;
             text-align: left;
         }
         th {
-            background-color: azure;
-            color: darkblue;
+            background-color: #990000;
+            color: white;
         }
-        </style>
-        </head>
-        <body>
-        <p>The following is the draft timetable:</p>
-        <table>
-        <tr>
-        """
+        p {
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+    </style>
+    <title>Draft Timetable</title>
+</head>
+<body>
+    <p>The following is the draft timetable:</p>
+    <table>
+        <thead>
+            <tr>
+"""
         
         for column in header:
-            html_content += f"<th>{html.escape(column)}</th>"
-        html_content += "</tr>"
+            html_content += f"                <th>{html.escape(column)}</th>\n"
+        html_content += "            </tr>\n        </thead>\n        <tbody>\n"
         
         for row in reader:
-            html_content += "<tr>"
+            html_content += "            <tr>\n"
             for column in row:
-                html_content += f"<td>{markdown_to_html_link(html.escape(column))}</td>"
-            html_content += "</tr>"
+                html_content += f"                <td>{markdown_to_html_link(html.escape(column))}</td>\n"
+            html_content += "            </tr>\n"
         
         html_content += """
-        </table>
-        </body>
-        </html>
-        """
+        </tbody>
+    </table>
+</body>
+</html>
+"""
     
     with open(html_filename, 'w') as htmlfile:
         htmlfile.write(html_content)
 
 
-# Example usage
-
+# [Example usage]
 # Save the CSV content to a file
 csv_content = """No,Date,Subject,Lab
 1,17 Jan 2020,Quantum Mechanics,Lab [Link](https://ursa.com/lab01.pdf) Demo [Link](https://www.youtube.com/watch?v=Lm9SZf2XFCc)
@@ -82,7 +96,5 @@ csv_content = """No,Date,Subject,Lab
 with open(dir_start + 'timetable.csv', 'w') as f:
     f.write(csv_content)
 
-
 dir_start = './sample_data/'
 csv_to_html(dir_start + 'timetable.csv', dir_start + 'timetable.html')
-

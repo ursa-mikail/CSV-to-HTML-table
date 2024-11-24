@@ -33,6 +33,9 @@
     <title>Draft Timetable</title>
 </head>
 <body>
+
+<H1> Demo of how CSV table can be translated to html </H1>
+
     <p>The following is the draft timetable:</p>
     <table>
         <thead>

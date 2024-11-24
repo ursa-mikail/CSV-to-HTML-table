@@ -4,7 +4,7 @@
 <H1> Demo of how CSV table can be translated to html </H1>
 
 <pre>
-Certain tags and sections, e.g. <body>, <html>, etc, removed from html version and used for readme.md.
+Certain tags and sections, e.g. `< body >`, `< html >`, etc, removed from html version and used for readme.md.
 </pre>
 
 ## Draft Timetable
